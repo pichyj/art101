@@ -1,0 +1,35 @@
+h1 {
+  color: #C52184;
+  font-size: 100px;
+  text-align: center;
+  font-family: Monospace;
+
+}
+
+p {
+  font-size: 40px;
+  font-family: Monospace;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+#content {
+  border-style: dashed;
+}
+
+body {
+  background-color: #F9B4ED;
+}
+
+img {
+  width: 500px;
+  height: 400px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
