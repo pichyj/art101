@@ -1,0 +1,50 @@
+h1 {
+  color: #C52184;
+  font-size: 100px;
+  text-align: center;
+  font-family: Monospace;
+}
+
+p {
+  font-size: 19px;
+  font-family: Monospace;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+h2 {
+  color: #C52184;
+  font-size: 100px;
+  text-align: center;
+  font-family: Monospace;
+}
+
+/* need this? */
+#selfies {
+  text-align: center;
+
+}
+#my-portrait1 {
+  float: left;
+}
+
+#my-portrait2 {
+  float: right;
+}
+
+.center {
+  width: 270px;
+  height: 420px;
+  display: inline-block;
+  text-align: center;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.center2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
