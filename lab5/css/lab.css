@@ -1,0 +1,30 @@
+h1 {
+  text-align: center;
+  color: #0A8F8F;
+  font-size: 50px;
+  font-family: sans-serif;
+}
+
+img {
+  width: 800px;
+  height: 400px;
+}
+
+body {
+  font-size: 25px;
+  color: white;
+  background-color: #3A4D4D;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  text-align: center;
+  color: #0A8F8F;
+  font-size: 50px;
+  font-family: sans-serif;
+}
