@@ -18,8 +18,7 @@ function names() {
   var nameJoin = nameSort.join('');
   console.log("The name joined is ", nameJoin);
 
-  return nameSort;
+  return nameJoin;
 }
 
-document.writeln("Check out your name: ",
-  names(), "</br>");
+document.writeln("Check out your name: ", names(), "</br>");
