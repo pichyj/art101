@@ -1,0 +1,27 @@
+h1 {
+  text-align: center;
+  color: #733439;
+  font-size: 40px;
+  font-family: sans-serif;
+}
+
+h2 {
+  text-align: left;
+  color: #733439;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+div {
+  text-align: left;
+}
+
+p {
+  text-align: left;
+}
+
+body {
+  font-size: 20px;
+  color: #1A0204;
+  background-color: #857A09;
+}
