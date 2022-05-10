@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+  color: #511C5C;
+  font-size: 40px;
+  font-family: sans-serif;
+}
+
+h2 {
+  text-align: left;
+  color: #511C5C;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+div {
+  text-align: left;
+}
+
+p {
+  text-align: left;
+}
+
+body {
+  font-size: 20px;
+  color: #1A0204;
+  background-color: #42456e;
+}
+
+#name-results {
+  border-radius: 15px;
+  background: #7B4DA5;
+  padding: 20px;
+  top: 200px;
+  text-align: center;
+  color: white;
+  display: inline-block;
+
+
+}
