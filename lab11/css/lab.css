@@ -1,0 +1,60 @@
+h1 {
+  text-align: center;
+  color: #6883BC;
+  font-size: 40px;
+  font-family: sans-serif;
+}
+
+h2 {
+  text-align: left;
+  color: #6883BC;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+div {
+  text-align: left;
+}
+
+p {
+  text-align: left;
+}
+
+body {
+  font-size: 20px;
+  color: white;
+  background-color: #8A307F;
+}
+
+.special {
+  border: dotted;
+  padding: 5px;
+  margin: 10px;
+}
+
+#button1 {
+  border-radius: 12px;
+  background-color: #EA738DFF;
+}
+
+#button2 {
+  border-radius: 12px;
+  background-color: #EA738DFF;
+}
+
+#button3 {
+  border-radius: 12px;
+  background-color: #EA738DFF;
+}
+
+#text1 {
+  display: none;
+}
+
+#text2 {
+  display: none;
+}
+
+#text3 {
+  display: none;
+}
