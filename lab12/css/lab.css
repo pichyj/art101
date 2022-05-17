@@ -1,0 +1,28 @@
+h2 {
+  text-align: left;
+  color: #BA8832;
+  font-size: 30px;
+  font-family: "Lucida Handwriting";
+}
+
+div {
+  text-align: left;
+  font-family: sans-serif;
+}
+
+p {
+  text-align: left;
+  font-family: sans-serif;
+}
+
+body {
+  font-size: 20px;
+  color: white;
+  background-color: #692837;
+}
+
+.input-output {
+  border: 1px dotted;
+  border-radius: 5px;
+  padding: 5px;
+}
