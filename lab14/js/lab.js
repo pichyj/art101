@@ -1,7 +1,6 @@
 // Authors: Pichy Jumpholwong and Zac Nakamura
-// Created: 23 May 2022
+// Created: 24 May 2022
 // License: Public Domain
-
 function filter(array, conditionFunction) {
       var validValues = [];
       for (var index = 0; index < array.length; index++) {
@@ -13,7 +12,6 @@ function filter(array, conditionFunction) {
         }
       }
     }
-
     var cart = [
   {
     "id": "123456",
@@ -35,5 +33,4 @@ function filter(array, conditionFunction) {
     cart = filter(cart, function(e) {
       return e.id !== '123';
     });
-
     console.log(cart);
