@@ -1,16 +1,16 @@
 
 h1 {
   text-align: center;
-  color: #4CCFA1;
+  color: #ff8c00;
   font-size: 40px;
-  font-family: impact
+  font-family: Didot;
 }
 
 h2 {
   text-align: left;
-  color: #4CCFA1;
+  color: #ff8c00;
   font-size: 30px;
-  font-family: impact;
+  font-family: Didot;
 }
 
 div {
@@ -20,16 +20,12 @@ div {
 
 p {
   text-align: left;
-  font-family: sans-serif;
+  font-family: monospace;
 }
 
 body {
   font-size: 20px;
-  color: white;
-  background-color: #6239A8;
-}
-
-#output.format {
-  column-width: 150px;
+  color: #ff7f50;
+  background-color: #ffdead;
 
 }
