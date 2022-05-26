@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+  color: #1e1ca3;
+  font-size: 40px;
+  font-family: Didot;
+}
+
+h2 {
+  text-align: left;
+  color: #1e1ca3;
+  font-size: 30px;
+  font-family: Didot;
+}
+
+div {
+  text-align: left;
+  font-family: sans-serif;
+  color: #1e1ca3;
+}
+
+p {
+  text-align: left;
+  font-family: monospace;
+  color: white;
+}
+
+body {
+  font-size: 20px;
+  color: #ff7f50;
+  background-color: #7291c4;
+
+}
