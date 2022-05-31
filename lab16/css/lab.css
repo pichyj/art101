@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+  color: #d9527f;
+  font-size: 40px;
+  font-family: monospace;
+}
+
+h2 {
+  text-align: left;
+  color: #d9527f;
+  font-size: 30px;
+  font-family: monospace;
+}
+
+div {
+  text-align: left;
+  font-family: monospace;
+  color: #d9527f;
+}
+
+p {
+  text-align: left;
+  font-family: cursive;
+  color: white;
+}
+
+body {
+  font-size: 20px;
+  color: #ff7f50;
+  background-color: #5da0c9;
+
+}
