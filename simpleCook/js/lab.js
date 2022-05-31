@@ -83,7 +83,7 @@ const recipeModule = ( () => {
   const veggieSelection = document.querySelector('select[id="veggie-recipe"]');
   const diarySelection = document.querySelector('select[id="dairy-recipe"]');
   const meatSelection = document.querySelector('select[id="protein-recipe"]');
-  const meatSelection = document.querySelector('select[id="fruit-recipe"]');
+  const fruitSelection = document.querySelector('select[id="fruit-recipe"]');
   const resultContainer = document.querySelector('.result-container');
   const ingredients = document.querySelector('.ingredients');
 
@@ -101,7 +101,7 @@ const recipeModule = ( () => {
       },
 
       handleFetch: async function(veggieValue, diaryValue, proteinValue, fruitValue) {
-          const dataRequest = await fetch(https://www.edamam.com/results/recipes/?search=${vegetableValue}&app_id=08ab47ee&app_key=fa5814a32eb2669676885dff6d983c44&health=${diaryValue}&diary=${meatValue}&to=30);
+          const dataRequest = await fetch(https://www.edamam.com/results/recipes/?search=${vegetableValue}&app_id=08ab47ee&app_key=fa5814a32eb2669676885dff6d983c44&health=${diaryValue}&diary=${meatValue}&to=30));
           const dataResponse = await dataRequest.json()
           console.log(dataResponse);
           const dataResults =  dataResponse.hits;
@@ -131,8 +131,6 @@ render: function(data) {
           return <span>${tag}</span>
           }).join('');
 
-          // Calories
-          // const calories = data.recipe.calories;
           //Ingredients
 
           const ingred = data.recipe.ingredientLines.map(ingredient => {
