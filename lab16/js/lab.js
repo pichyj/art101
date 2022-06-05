@@ -1,5 +1,5 @@
 // Authors: Pichy Jumpholwong and Zac Nakamura
-// Created: 26 May 2022
+// Created: 30 May 2022
 // License: Public Domain
 
 var endpoint = "https://xkcd.com/info.0.json";
