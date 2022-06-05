@@ -1,12 +1,21 @@
 html {
-  box-sizing: border-box;
-}
 /* * means "all elements" (a universal selector), so we are setting all elements to have zero margins,
 and zero padding, thus making them look the same in all browsers. */
+}
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+p#one {
+  text-align: left;
+  color: #88c249;
+  font-family: "Apple Chancery", cursive;
+  font-weight: 50;
+  line-height: 1em;
+  font-size: 2em;
+  margin-top: 100px;
 }
 
 p {
@@ -15,7 +24,83 @@ p {
   font-family: "Apple Chancery", cursive;
   font-weight: 50;
   line-height: 1em;
-  font-size: 2em;
+  font-size: 1.5em;
+}
+
+.image1 {
+  float: right;
+  position: relative;
+  top: -425px;
+  left: -120px;
+  width: 400px;
+  height: 400px;
+}
+
+.image2 {
+  float: left;
+  position: relative;
+  border-radius: 25px;
+  top: -116px;
+  right: -50px;
+  width: 200px;
+  height: 100px;
+}
+
+.image3 {
+  float: right;
+  position: relative;
+  bottom: 430px;
+  border-radius: 25px;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+}
+
+.image4 {
+  float: right;
+  position: relative;
+  border-radius: 25px;
+  top: -218px;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+}
+
+.image5 {
+  position: relative;
+  bottom: 430px;
+  border-radius: 25px;
+  right: -1000px;
+  width: 200px;
+  height: 200px;
+}
+
+.wrapper {
+  width: 90%;
+  height: 400px;
+  margin: 1em auto;
+  background: #f2f1b7;
+  padding: 0.5em 2em 0.5em 2em;
+  border-radius: 20px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+}
+.wrapper h1 {
+  font-family: "Bradley-Hand", cursive;
+  color: #52643e;
+  font-weight: 500;
+  line-height: 1em;
+  text-align: left;
+  margin: 0;
+  font-size: 7em;
+  position: relative;
+  bottom: -60px;
+}
+
+.wrapper h1 span {
+  font-size: 0.2em;
+  background: rgb(81, 206, 129);
+  padding: 0.2em 0.5em;
 }
 
 body {
@@ -24,28 +109,6 @@ body {
   font-family: "Bradley-Hand", cursive;
   background: #ecebbd;
   /* color: #a9ca84; */
-}
-.wrapper {
-  width: 90%;
-  margin: 1em auto;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0.5em 2em 0.5em 2em;
-  border-radius: 20px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-.wrapper h1 {
-  font-family: "Bradley-Hand", cursive;
-  color: #52643e;
-  font-weight: 500;
-  line-height: 1em;
-  text-align: center;
-  margin: 0;
-  font-size: 4em;
-}
-.wrapper h1 span {
-  font-size: 0.2em;
-  background: rgb(81, 206, 129);
-  padding: 0.2em 0.5em;
 }
 
 h2 {
@@ -57,16 +120,21 @@ h2 {
   margin: 0;
   font-size: 2em;
 }
+
 .profiling-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  text-align: center;
+  /* align-items: center; */
 }
+
 .veggie-container {
   margin: 0 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 .veggie-container select {
   border: none;
@@ -83,6 +151,7 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
+
 .fruit-container select {
   border: none;
   height: 2.2em;
@@ -98,6 +167,7 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
+
 .protein-container select {
   border: none;
   height: 2.2em;
@@ -113,6 +183,7 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
+
 .dairy-container select {
   border: none;
   height: 2.2em;
@@ -127,6 +198,7 @@ h2 {
   justify-content: flex-end;
   margin: 3em 0 0 0;
 }
+
 .submit-button input {
   padding: 0.5em 4em;
   margin: 1em 0;
@@ -139,14 +211,27 @@ h2 {
   outline: none;
   transition: all 0.2s;
 }
-.submit-button input:active {
+
+/*
+.submit-button input {
   background: #26f393;
   box-shadow: none;
   color: #000;
-}
+  margin-top: 80px;
+} */
 
+.done {
+  box-shadow: none;
+  color: #000;
+  margin-top: 80px;
+  text-align: right;
+  border-radius: 25px;
+
+}
 .display {
   margin: 1em;
+  border-radius: 25px;
+
   /* background: rgba(0, 0, 0, 0.2); */
 }
 /* .result-container {
@@ -156,109 +241,3 @@ h2 {
   justify-content: space-around;
   min-height: 100vh;
 }
-.pill {
-  color: #000;
-  height: fit-content;
-  width: min-content;
-  display: flex;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 1em;
-  margin: 1em;
-  border-radius: 10px;
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-}
-.pill > * {
-  margin: 0;
-  text-align: center;
-}
-.pill p {
-  margin-bottom: 1em;
-}
-.pill p.calories {
-  margin: 1em 0 0 0;
-}
-.pill .title {
-  font-size: 1.5em;
-  margin-bottom: 0.2em;
-}
-.pill span {
-  margin: 1em auto;
-  padding: 0.2em 0.5em;
-  background: rgb(11, 45, 97);
-  color: white;
-  text-align: center;
-  width: fit-content;
-}
-.pill .tags span {
-  margin: 0.5em auto;
-  border-radius: 5px;
-  margin-top: 0;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0.7em 0 0 0.7em;
-}
-.pill a {
-  text-decoration: none;
-  padding: 0.4em 1em 0.5em 1em;
-  background: #26f393;
-  width: fit-content;
-  margin: 0 auto;
-  color: white;
-  border-radius: 10px;
-  border: none;
-  transition: transform 0.2s ease-in-out;
-  transform: scaleX(0.95);
-}
-.pill a:hover {
-  transform: scaleX(1);
-}
-.pill ol {
-  margin-bottom: 0.5em;
-  background: rgba(255, 255, 255, 0.9);
-  height: 20vh;
-  overflow: scroll;
-}
-.pill li {
-  text-align: left;
-  padding-top: 0.2em;
-  margin-bottom: 0.2em; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-content: space-evenly; */
-/* } */
-/* @media (min-width: 0px) and (max-width: 370px) {
-  .display {
-    background: none;
-  }
-  .submit-button {
-    justify-content: center;
-  }
-  .wrapper h1 span {
-    display: none;
-  }
-  .pill {
-    min-width: 280px;
-    max-width: 100%;
-  }
-  .pill {
-    font-size: 0.7em;
-  }
-  .pill ol {
-    height: unset;
-  }
-}
-@media (min-width: 800px) {
-  .wrapper {
-    width: 800px;
-  }
-}
-@media (min-width: 1200px) {
-  .wrapper {
-    width: 1200px;
-  }
-} */
