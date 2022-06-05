@@ -121,12 +121,21 @@ h2 {
   font-size: 2em;
 }
 
-.profiling-container {
+/* .profiling-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  text-align: center; */
+  /* align-items: center; */
+/* } */
+
+
+#content, #output {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   text-align: center;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .veggie-container {

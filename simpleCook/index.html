@@ -7,7 +7,8 @@
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" -->
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     <link rel="stylesheet" type="text/css" href="css/cook.css">
-
+</head>
+<body>
   <!-- title -->
   <div class="wrapper">
     <h1>Simple Cook</h1>
@@ -23,7 +24,7 @@
 
   <!-- This will be at the left side -->
   <h2>Your Ingredients</h2>
-    <div class="profiling-container">
+    <div id="content" class="profiling-container">
       <div class="veggie-container">
         <p>Please select a vegetable</p>
         <select name="veggie" id="veggie-recipe">
@@ -86,6 +87,7 @@
              <option value="None">none</option>
            </select>
        </div>
+
 
    <div class="done">
      <input type="button" value="Done" id="submit">
