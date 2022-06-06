@@ -1,72 +1,146 @@
-// Other global variables of mine
-var name = '';
-
-// Grabbing all importent element from the website
-var outputEl = document.getElementById("output");
-var inputEl = document.getElementById("user-name");
-var input2El = document.getElementById("auto-clear");
-var buttonEl = document.getElementById("my-button");
-var clearEl = document.getElementById("clear");
-var additionalInputsEl = document.getElementById("added-forms");
-
-// Creating editable outputs for output El
-var new2El = document.createElement("p");
-
-function prompted(){
-  name = inputEl.value
-}
-
-
-function clearOutput(){
-  outputEl.innerHTML = '';
-}
-
-function refreshAnagram(){
-  // gets the prompt
-  prompted();
-
-  //checks if auto clear is on, then clears if true
-  if (input2El.checked == true)
+[
   {
-    clearOutput();
+    "name":"BLT",
+    "ingredients": ["Bacon", "Lettuce", "Tomato", "Bread"],
+    "hyperlink":"https://themom100.com/recipe/the-ultimate-blt-sandwich/",
+    "description": "The best BLT Sandwich needs a bit of discussion. Thick-cut bacon vs. regular, cooked to the perfect degree of crispness.  Buying good bacon vs. everyday bacon is worth the extra few bucks here.",
+    "image": "https://themom100.com/wp-content/uploads/2019/08/ultimate-blt-sandwich-345-768x768.jpg",
+    "priority": 0
+  },
+  {
+    "name":"PBJ Bread",
+    "ingredients": ["Peanut Butter", "Jelly", "Bread"],
+    "hyperlink":"https://www.cakenknife.com/pbj-bread/",
+    "description": "This PB&J bread really is the best way to start the day – or to snack on whenever you are hungry, which if you are anything like me, seems to be all the time… But seriously, it’s just so moist and just dense enough to be fantastically filling but not too over-indulgent. This bread is a new favorite of mine, and the fact that it takes minimal effort to make means that it has become a staple in our home.",
+    "image": "https://www.cakenknife.com/wp-content/uploads/2014/03/PBJ-Bread_2.jpg",
+    "priority": 0
+  },
+  {
+    "name":"Chicken Alfredo",
+    "ingredients": ["Chicken", "Alfredo Sauce", "Pasta"],
+    "hyperlink":"https://bellyfull.net/chicken-alfredo-recipe/",
+    "description": "This easy Chicken Alfredo recipe includes golden pan-fried seasoned chicken breasts and tender noodles, coated in the most dreamy cream sauce ever. A showstopper meal and it’s all done in just over 30 minutes!",
+    "image": "https://bellyfull.net/wp-content/uploads/2021/02/Chicken-Alfredo-blog-4.jpg",
+    "priority": 0
+  },
+  {
+    "name":"Tomato Soup",
+    "ingredients": ["Tomato", "Onion", "Butter"],
+    "hyperlink":"https://www.inspiredtaste.net/27956/easy-tomato-soup-recipe/",
+    "description": "Combine butter, onion, and tomatoes. Grab a Dutch oven or pot, place it over medium heat and melt the butter. Add half an onion that’s been cut into large wedges and a large can of tomatoes. Add water or broth and simmer. Bring everything to a low simmer, add some salt and leave it alone for about 40 minutes.",
+    "image": "https://www.inspiredtaste.net/wp-content/uploads/2016/08/Tomato-Soup-Recipe-1-1200.jpg",
+    "priority": 0
+  },
+  {
+    "name":"Gilled Cheese Sandwich",
+    "ingredients": ["Cheese", "Butter", "Bread"],
+    "hyperlink":"https://natashaskitchen.com/grilled-cheese-sandwich/",
+    "description": "Grilled cheese is a classic American sandwich that has been around since 1920. It is a hot sandwich made with buttered and toasted bread and originally filled with American cheese, but is now commonly made with one or more different cheeses.",
+    "image": "https://natashaskitchen.com/wp-content/uploads/2021/08/Grilled-Cheese-Sandwich-3.jpg",
+    "priority": 0
+  },
+  {
+    "name":"Carrot Fries",
+    "ingredients": ["Carrot", "Salt"],
+    "hyperlink":"https://feedingmykid.com/recipe/carrot-fries-recipe/",
+    "description": "4 large carrots,sprinkle of sea salt. Preheat oven to 450F, and spray baking sheet with non-stick cooking spray.Slice carrots into french-fry shapes, and place on baking sheet.Sprinkle sea salt over fries.Bake for 12 minutes. Enjoy!",
+    "image": "https://feedingmykid.com/wp-content/uploads/2016/10/Carrot-Fries-2.jpg",
+    "priority": 0
+  },
+  {
+    "name":"Tomato Stew egg",
+    "ingredients": ["Tomato", "Egg","Salt"],
+    "hyperlink":"https://misschinesefood.com/tomato-stew-eggs/",
+    "description": "Wash the tomatoes and dig a hole; Beat the eggs into a bowl, add some salt and stir; Pour the egg liquid into the tomatoes; Cover the tomato lid; Add water to the pot, boil, and put the tomatoes on the steaming rack; Close the lid; Take it out when steamed; Cut some green onions and sprinkle on the custard. Finally, you get home cooking tomato stew.",
+    "image": "https://i2.supercook.com/e/5/6/a/e56a39cacdbe6ba55ea9451ab2d73a5f-0.jpg",
+    "priority": 0
+  },
+  {
+    "name":"Grilled Flat Iron Steak",
+    "ingredients": ["Scallion", "Lemon","Beef"],
+    "hyperlink":"https://honest-food.net/grilled-flat-iron-steak-recipe/",
+    "description": "Salt your flat iron steaks on both sides and let them sit, uncovered, in the fridge up to overnight, and at least 1 hour. I like to set them on a rack over a tray to catch any juices. This preseasons your meat and will help develop a better crust on the grill. Get your grill very hot and clean and oil your grates as I described above. When you start this process, take your steaks out of the fridge to warm up a bit. You still want them cool, though, so no more than about 15 minutes. Grill your flat iron steaks hard on one side, a good 5 minutes without touching them. Flip and grill to the doneness you like, anywhere from 2 to 10 minutes, depending on the heat and the thickness of your steak. Use the finger test for doneness to determine this. Move your steaks from the grill, coat them with freshly cracked black pepper - or whatever spices and herbs you like - and let it rest 5 minutes. Slice across the grain (the narrow end), and squeeze citrus juice over it all.",
+    "image": "https://honest-food.net/wp-content/uploads/2019/05/flat-iron-steak-recipe.jpg",
+    "priority": 0
+  },
+  {
+    "name":"Crispy Cracklin' Pork Picnic Shoulder",
+    "ingredients": ["Pork"],
+    "hyperlink":"https://dinnerthendessert.com/crispy-cracklin-pork-picnic-shoulder-slow-cooker-oven/",
+    "description": "A foolproof EASY slow cooker and oven method for a shatteringly crisp Pork picnic shoulder that is pull apart tender on the inside with a thin crisp cracklin’ skin layer.",
+    "image": "https://dinnerthendessert.com/wp-content/uploads/2015/07/Skin.jpg",
+    "priority": 0
+  },
+  {
+    "name":"Baked Chicken Thighs With Butter and Onions",
+    "ingredients": ["Onion","Chicken","Butter"],
+    "hyperlink":"https://www.washingtonpost.com/food/2021/04/30/baked-chicken-thighs-recipe-butter/",
+    "description": "A super simple, hands-off recipe that is perfect for busy families. It’s great served with rice to sop up the delightful mix of butter, onions and chicken drippings created in the roasting pan.",
+    "image": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/Y2Q6VUVIGAI6XKFHL5C53TPTMQ.jpg&w=1440",
+    "priority": 0
+  },
+  {
+    "name":"Zucchini Zoodles Homemade Marinara",
+    "ingredients": ["Zucchini"],
+    "hyperlink":"http://www.feedyoursoul2.com/zucchini-zoodles-homemade-marinara/",
+    "description": "This is such an easy dish to put together.  The sauce takes close to two hours but that is counting the roasting of the garlic in the oven.  The real cooking time is 30 – 45 minutes and everything is assembled 5 – 10 minutes.  So once you have everything in your pan, you can get back to your Facebook or your TV. ",
+    "image": "http://www.feedyoursoul2.com/wp-content/uploads/2017/09/Zucchini-Noodles-Homemade-Marainara-10-500.jpg",
+    "priority": 0
+  },
+  {
+    "name":"Simple Seared Salmon Recipe",
+    "ingredients": ["Fish","Butter","Lemon"],
+    "hyperlink":"https://www.winemag.com/recipe/simple-seared-salmon-recipe/",
+    "description": "Look for fresh, wild-caught Pacific salmon for the cleanest taste and firmest texture. It will lend itself to any number of aromatics, like citrus fruits and side dishes like sautéed fennel with the gremolata or Brussels sprouts with the lemon butter. ",
+    "image": "https://253qv1sx4ey389p9wtpp9sj0-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/Seared_Salmon_Pairings-700x461.jpg",
+    "priority": 0
+  },
+  {
+    "name":"CORN MILK",
+    "ingredients": ["Corn","Milk"],
+    "hyperlink":"https://www.chinayummyfood.com/corn-milk/",
+    "description": "I usually use High Speed Blender to nake the milk corn, it is very easy and simple. You just need to put the ingredients in the blender and waiting for 20 minutes. And then, you can get hot and thick milk corn. It is very sweet and delicious! No thickener, the scent of the mouth is amazing!",
+    "image": "https://www.chinayummyfood.com/wp-content/uploads/2019/09/Corn-Milk.jpg",
+    "priority": 0
+  },
+  {
+    "name":"Bacon Avocado Fries",
+    "ingredients": ["Avocado","Bacon"],
+    "hyperlink":"https://www.delish.com/cooking/recipe-ideas/recipes/a48261/bacon-avocado-fries-recipe/",
+    "description":"Preheat oven to 425º. Slice each avocado into 8 equally-sized wedges. Wrap each wedge in bacon, cutting bacon if needed. Place on a baking sheet, seam side down. Bake until bacon is cooked through and crispy, 12 to 15 minutes. Serve with ranch dressing.",
+    "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-191907-bacon-wrapped-avocado-fries-0360-landscape-pf-1565884766.jpg?crop=0.668xw:1.00xh;0.146xw,0&resize=768:*",
+    "priority": 0
+  },
+  {
+    "name":"Cucumber-Avocado Salad",
+    "ingredients": ["Cuumber","Avocado"],
+    "hyperlink":"https://cooking.nytimes.com/recipes/1022411-cucumber-avocado-salad",
+    "description": "Crunchy cucumbers and creamy avocados are the stars of this simple five-ingredient salad. Peeling the cucumbers in alternating stripes helps them soak up seasonings while maintaining their shape. After being cut into bite-size pieces, they are combined with salt to draw out moisture, concentrating their flavor. Cubed avocado is tossed with lemon juice or vinegar to prevent browning, then everything is stirred together vigorously so that the avocado breaks down a bit to add a glossy coating. Finish with a hit of red-pepper flakes for heat, or embellish with herbs, lettuces, beans, soft-boiled eggs, feta, nuts and so on.",
+    "image": "https://static01.nyt.com/images/2021/07/13/dining/as-cucumber-avocado-saladd/merlin_189372006_a9ab5728-f86c-4727-aedf-3f1f6f4633b8-articleLarge.jpg",
+    "priority": 0
+  },
+  {
+    "name":"Sesame Tofu With Broccoli",
+    "ingredients": ["Broccoli","Tofu"],
+    "hyperlink":"https://www.bonappetit.com/recipe/sesame-tofu-with-broccoli",
+    "description":"This recipe is a riff on a Chinese American classic, sesame chicken. Achieving a crispy coating around the tofu is key—it adds to the overall texture of the finished dish.",
+    "image": "https://assets.bonappetit.com/photos/6019c57721494f6f6d02df99/1:1/w_2240,c_limit/Basically-SesameTofu-Broccoli-02.jpg",
+    "priority": 0
+  },
+  {
+    "name":"One-pan duck with Savoy cabbage",
+    "ingredients": ["Cabbage","Duck"],
+    "hyperlink":"https://www.bbcgoodfood.com/recipes/one-pan-duck-savoy-cabbage",
+    "description":"Lightly score the skin of the duck breasts, then generously season with the peppercorns and a sprinkling of salt. Lay the duck breasts, skin-side down, in a non-stick sauté pan, then place over a low heat. Leave the duck for 15 mins to brown and release its fat, then flip over onto the flesh side for 5 mins. Remove the duck from the pan, then turn up the heat. Add the potatoes to the pan, fry until brown and crisp, then scatter over the parsley and garlic. Scoop out with a slotted spoon onto a plate, then season with salt. Keep the pan on the heat. Fry the bacon until crisp, then add the cabbage. Cook for 1 min, add a splash of water, then fry for 2 mins, just until the cabbage is wilted. While the cabbage is cooking, whisk any juices from the duck with the vinegar and olive oil. To serve, carve the duck breast into slices. Fan out on large dinner plates, spoon a neat bundle of cabbage on one side, then pile a serving of potatoes on the other. Drizzle over the dressing and serve.",
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-10400_11-60041db.jpg?quality=90&webp=true&resize=440,400",
+    "priority": 0
+  },
+  {
+    "name":"SAUTÉED PORK BELLY WITH CAULIFLOWER",
+    "ingredients": ["Cauliflower","Pork"],
+    "hyperlink":"https://www.spicetheplate.com/pork/sauteed-pork-belly-with-cauliflower/",
+    "description":"Sautéed pork belly with cauliflower is a popular dish frequently ordered at restaurants in China. With this recipe, you can easily recreate this tasty dish at home. Aside from roasting, if you are looking for new ways to serve cauliflower, this will be a great recipe to add to your collection.",
+    "image": "https://i2.wp.com/www.spicetheplate.com/wp-content/uploads/2016/11/Pork-Belly-with-Cauliflower-7.jpg?w=680&ssl=1",
+    "priority": 0
   }
-  // puts prompt into output div
-  var new1El = document.createElement("p");
-  new1El.id = "smol";
-  if (name=="h"){
-    new1El.innerHTML = "./Anagram -h" + "<br>&emsp;> Just input any string and it will do stuff, DON'T INPUT NULL";
-    outputEl.appendChild(new1El);
-  }
-  else{
-    new1El.innerHTML = "./Anagram -i\"" + name + "\"<br>&emsp;> " + anagramMe(name);
-    outputEl.appendChild(new1El);
-  }
-  if (name.toLowerCase() == "null"){
-    refreshAnagram();
-  }
-}
-
-// Reasonable random with max, from 0 to max, inclusive
-function RRWM(max){
-  return Math.floor(Math.random() * (max+1));
-}
-
-// Creates an anagram using the Fisher-Yates Shuffle
-function anagramMe(str){
-  strLower = str.toLowerCase();
-  var strArray = strLower.split('');
-  var tempVal = ''
-  for (i = strArray.length-1; i > 0; i--){ //only line edited from my implmentation in lab7, realized it wasn't always functioning right
-    toSwap = RRWM(i);
-    tempVal = strArray[i];
-    strArray[i] = strArray[toSwap];
-    strArray[toSwap] = tempVal;
-  }
-  strArray[0] = strArray[0].toUpperCase();
-  var output = strArray.join('');
-  return output;
-}
-
-// Assigning functions to buttons
-buttonEl.addEventListener("click", refreshAnagram);
-clearEl.addEventListener("click", clearOutput);
+]

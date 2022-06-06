@@ -3,25 +3,28 @@
 // License: Public Domain
 
 
+// All used global data
 var recipesArray = [];
-fetch('js/cook.JSON')
+fetch('js/recipes.json')
   .then(response => response.json())
   .then(data => recipesArray = data);
 var recipeDictionary = {};
 var ingredientInput = [];
 var outputArray = [];
-console.log("Version 0.6.10");
+console.log("Version 1.1.0");
 var veggie = document.getElementById('veggie-recipe');
 var fruit = document.getElementById('fruit-recipe');
 var protien = document.getElementById('protein-recipe');
 var dairy = document.getElementById('dairy-recipe');
+var grain = document.getElementById('grain-recipe');
+var misc = document.getElementById('misc-recipe');
 var outputEl = document.getElementById('output');
 
 
 //Turns the imported recipe data into a dictionary organized by ingredients
 function dictionizeRecipes(){
   recipeDictionary = {};
-  console.log(recipesArray);
+  recipeDictionary["None"] = [];
   for (i = 0; i < recipesArray.length; i++){
     for (k = 0; k < recipesArray[i].ingredients.length; k++){
       if (recipeDictionary[recipesArray[i].ingredients[k]]==null){
@@ -30,7 +33,6 @@ function dictionizeRecipes(){
       recipeDictionary[recipesArray[i].ingredients[k]].push(recipesArray[i]);
     }
   }
-  console.log(recipeDictionary);
 }
 
 //Gets ingredient input from site elements, stores into ingredientInput array, might change if the website changes
@@ -39,11 +41,20 @@ function getInput(){
   ingredientInput[1] = fruit.options[fruit.selectedIndex].value;
   ingredientInput[2] = protien.options[protien.selectedIndex].value;
   ingredientInput[3] = dairy.options[dairy.selectedIndex].value;
+  ingredientInput[4] = grain.options[grain.selectedIndex].value;
+  ingredientInput[5] = misc.options[misc.selectedIndex].value;
 }
 
 //Build array based on ingredientInput, lightly sorted
 function buildOutput(){
+  for (m = 0; m < outputArray.length; m++){
+    outputArray[m].priority = 0;
+  }
+  outputArray = [];
   for (i = 0; i < ingredientInput.length; i++){
+    if (recipeDictionary[ingredientInput[i]] == null){
+      recipeDictionary[ingredientInput[i]] = [];
+    }
     for (k = 0; k < recipeDictionary[ingredientInput[i]].length; k++){
       if (outputArray.length==0){
         outputArray[0] = recipeDictionary[ingredientInput[i]][k];
@@ -82,20 +93,27 @@ function buildSite(){
   outputEl.innerHTML = '';
   for (i = 0; i < outputArray.length; i++){
     var tempRecipe = document.createElement("div");
-    tempRecipe.setAttribute("class", "recipeBox");
+    tempRecipe.setAttribute("class", "recipebox");
+
+    var tempImage = document.createElement('img');
+    tempImage.setAttribute("src", outputArray[i].image);
+    tempImage.setAttribute("class", "recipeimage");
+    tempRecipe.appendChild(tempImage);
+
     var tempTextBox = document.createElement("div");
+    tempTextBox.setAttribute("class", "recipetextbox");
+
     var tempHyperLink = document.createElement('a');
-    tempHyperLink.setAttribute("href", outputArray.hyperlink);
+    tempHyperLink.setAttribute("href", outputArray[i].hyperlink);
+
     var tempTitle = document.createElement('p');
     tempTitle.innerHTML = outputArray[i].name;
+
     if (i==0){
       tempTitle.innerHTML += ' - BEST MATCH';
     }
     tempHyperLink.appendChild(tempTitle);
     tempTextBox.appendChild(tempHyperLink);
-    var tempImage = document.createElement('image');
-    tempImage.setAttribute("src", outputArray.image);
-    tempRecipe.appendChild(tempImage);
     var ingredientList = "Ingredients:";
     for (k = 0; k < outputArray[i].ingredients.length; k++){
       ingredientList += " " + outputArray[i].ingredients[k] + ",";

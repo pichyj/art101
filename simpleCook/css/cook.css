@@ -29,7 +29,7 @@ p {
 
 .image1 {
   float: right;
-  position: relative;
+  position: absolute;
   top: -425px;
   left: -120px;
   width: 400px;
@@ -38,7 +38,7 @@ p {
 
 .image2 {
   float: left;
-  position: relative;
+  position: absolute;
   border-radius: 25px;
   top: -116px;
   right: -50px;
@@ -48,7 +48,7 @@ p {
 
 .image3 {
   float: right;
-  position: relative;
+  position: absolute;
   bottom: 430px;
   border-radius: 25px;
   left: -40px;
@@ -58,7 +58,7 @@ p {
 
 .image4 {
   float: right;
-  position: relative;
+  position: absolute;
   border-radius: 25px;
   top: -218px;
   left: -40px;
@@ -67,7 +67,7 @@ p {
 }
 
 .image5 {
-  position: relative;
+  position: absolute;
   bottom: 430px;
   border-radius: 25px;
   right: -1000px;
@@ -108,7 +108,6 @@ body {
   margin: 0;
   font-family: "Bradley-Hand", cursive;
   background: #ecebbd;
-  /* color: #a9ca84; */
 }
 
 h2 {
@@ -121,22 +120,24 @@ h2 {
   font-size: 2em;
 }
 
-/* .profiling-container {
+.profiling-container {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  text-align: center; */
+  text-align: center;
+  position: relative;
+  width:100%;
   /* align-items: center; */
-/* } */
-
-
+}
+/*
 #content, #output {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
-}
+  position: relative;
+} */
 
 .veggie-container {
   margin: 0 1em;
@@ -175,6 +176,17 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.recipebox{
+  clear:both;
+}
+.recipetextbox{
+  align-items: center;
+}
+.recipeimage{
+  float:left;
+  width:250px;
 }
 
 .protein-container select {
@@ -219,34 +231,4 @@ h2 {
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
   outline: none;
   transition: all 0.2s;
-}
-
-/*
-.submit-button input {
-  background: #26f393;
-  box-shadow: none;
-  color: #000;
-  margin-top: 80px;
-} */
-
-.done {
-  box-shadow: none;
-  color: #000;
-  margin-top: 80px;
-  text-align: right;
-  border-radius: 25px;
-
-}
-
-.display {
-  margin: 1em;
-  border-radius: 25px;
-  /* background: rgba(0, 0, 0, 0.2); */
-}
-/* .result-container {
-  margin: 1em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  min-height: 100vh;
 }
