@@ -1,7 +1,6 @@
-// Authors: Pichy Jumpholwong, Shimao Zhou, Zibo Chen, Travis Carlson
-// Created: 18 May 2022
-// License: Public Domain
-
+/*
+  I Travis Carlen wrote the following code the 2nd of June 2022.
+*/
 
 // All used global data
 var recipesArray = [];
